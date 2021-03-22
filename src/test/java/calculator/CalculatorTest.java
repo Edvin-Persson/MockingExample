@@ -112,4 +112,16 @@ public class CalculatorTest {
     }
 
 
+    // Step 8
+
+
+    @Test
+    @DisplayName("Multiple delimiters")
+    void allowingMultipleDelimiters() {
+
+        assertEquals(6, calculator.add("1*2%3"));
+
+    }
+
+
 }
