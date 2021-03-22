@@ -14,7 +14,9 @@ public class Calculator {
 
         for (String arrayNumber : arrayNumbers) {
 
-            if (!arrayNumber.isEmpty()) {
+
+            if (!arrayNumber.isEmpty() && Integer.parseInt(arrayNumber) <= 1000) {
+
 
                 addingNumbers += Integer.parseInt(arrayNumber);
 

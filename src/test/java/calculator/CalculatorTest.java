@@ -89,4 +89,15 @@ public class CalculatorTest {
     }
 
 
+    // Step 6
+
+    @Test
+    @DisplayName("Excluding numbers bigger than 1000")
+    void excludeNumbersBiggerThan1000() {
+
+        assertEquals(6, calculator.add("1,5,1001"));
+
+    }
+
+
 }
