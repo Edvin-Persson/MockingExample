@@ -124,4 +124,16 @@ public class CalculatorTest {
     }
 
 
+    // Step 9
+
+
+    @Test
+    @DisplayName("Multiple delimiters with length ")
+    void multipleDelimitersWithLength() {
+
+        assertEquals(10, calculator.add("1,,,,,,/////;;;,,2%%%%%;;;;3**\n\n4"));
+
+    }
+
+
 }
