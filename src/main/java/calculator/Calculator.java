@@ -2,6 +2,8 @@ package calculator;
 
 public class Calculator {
 
+    boolean illegalException = false;
+    String negativeNumbers = "";
 
     public int add(String numbers) {
 
@@ -17,9 +19,23 @@ public class Calculator {
                 addingNumbers += Integer.parseInt(arrayNumber);
 
             }
+            if (arrayNumber.contains("-")) {
+
+                illegalException = true;
+
+                negativeNumbers += " " + arrayNumber;
+
+
+            }
 
 
         }
+
+
+        if (illegalException) {
+            throw new IllegalArgumentException("Negative numbers not allowed" + negativeNumbers);
+        }
+
 
         return addingNumbers;
     }

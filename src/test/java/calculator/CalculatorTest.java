@@ -7,6 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
 
@@ -71,6 +72,19 @@ public class CalculatorTest {
 
         assertEquals(3, calculator.add("//;\n1;2"));
         assertEquals(15, calculator.add("1/2\n3;4,5"));
+
+    }
+
+
+    // Step 5
+
+    @Test
+    @DisplayName("Adding negative number")
+    void addingNegativeNumber() {
+
+        var iae = assertThrows(IllegalArgumentException.class, () -> calculator.add("-1,-10"));
+
+        assertEquals("Negative numbers not allowed -1 -10", iae.getMessage());
 
     }
 
