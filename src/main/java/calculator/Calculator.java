@@ -7,8 +7,10 @@ public class Calculator {
 
     public int add(String numbers) {
 
+        
+        String[] arrayNumbers = numbers.split("[^0-9-]");
 
-        String[] arrayNumbers = numbers.split("[\\[\\]\n,;/*%]");
+
         int addingNumbers = 0;
 
 
